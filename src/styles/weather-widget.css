@@ -1,0 +1,10 @@
+#weather-widget{
+    margin: 48px;
+}
+
+#weather-widget > .temp > p{
+    font-size: 143px;
+    font-weight: normal;
+    letter-spacing: -8px;
+    color: white;
+}
