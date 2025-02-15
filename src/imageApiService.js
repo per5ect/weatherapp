@@ -1,19 +1,19 @@
 import { baseFetch } from "./helpers/baseFetch.js";
-import { IMAGE_API_URL, IMAGE_ACCESS_KEY } from '../env.js'
+
 
 function createImageApiService(){
-    const URL = IMAGE_API_URL
-    const ACCESS_KEY = IMAGE_ACCESS_KEY
+    const IMAGE_API_URL = import.meta.env.VITE_IMAGE_API_URL;
+    const IMAGE_ACCESS_KEY = import.meta.env.VITE_IMAGE_API_ACCESS_KEY;
 
     const options = {
         headers: {
             "Accept-Version": "v1",
-            "Authorization": `Client-ID ${ACCESS_KEY}`
+            "Authorization": `Client-ID ${IMAGE_ACCESS_KEY}`
         }
     }
 
     function fetchImageByKeywords(keywords){
-        return baseFetch(`${URL}?query=${keywords}&client_id=${ACCESS_KEY}`, options)
+        return baseFetch(`${IMAGE_API_URL}?query=${keywords}&client_id=${IMAGE_ACCESS_KEY}`, options)
     }
 
     return{
