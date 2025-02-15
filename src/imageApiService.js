@@ -1,7 +1,9 @@
-import {baseFetch} from "./helpers/baseFetch.js";
+import { baseFetch } from "./helpers/baseFetch.js";
+import { IMAGE_API_URL, IMAGE_ACCESS_KEY } from '../env.js'
 
 function createImageApiService(){
-    const ACCESS_KEY = "JZ0LxD66eiIBVbcL1P0PUQiLqZrmXyuAltPe8z8OKDg"
+    const URL = IMAGE_API_URL
+    const ACCESS_KEY = IMAGE_ACCESS_KEY
 
     const options = {
         headers: {
@@ -11,7 +13,7 @@ function createImageApiService(){
     }
 
     function fetchImageByKeywords(keywords){
-        return baseFetch(`https://api.unsplash.com/search/photos?query=${keywords}&client_id=${ACCESS_KEY}`, options)
+        return baseFetch(`${URL}?query=${keywords}&client_id=${ACCESS_KEY}`, options)
     }
 
     return{

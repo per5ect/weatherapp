@@ -22,6 +22,12 @@ p, a, h1, h2, h3, h4, h5, h6 {
 #app-background{
     display: flex;
     flex: 1;
+
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size:  cover;
+    background-position:  center;
+    background-repeat: no-repeat;
 }
 
 .primary-container{

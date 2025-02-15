@@ -4,5 +4,5 @@ export const formatTemperature = (temperature) => {
     }
     const roundFloorTemp = Math.floor(temperature)
 
-    return `${roundFloorTemp}°C`
+    return `${roundFloorTemp}°`
 }
