@@ -10,7 +10,13 @@ function createEnvFile(){
     export const IMAGE_ACCESS_KEY = "${process.env.IMAGE_API_ACCESS_KEY}"
     `
 
-    fs.writeFileSync('./env.js', envConfigFile)
+    fs.writeFile('./env.js', envConfigFile, (err) => {
+        if (err){
+            console.log(err)
+            throw err
+        }
+        console.log('File has been saved')
+    })
 }
 
 createEnvFile()
