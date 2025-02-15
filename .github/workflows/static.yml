@@ -35,20 +35,20 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-      - name: Create and populate .Renviron file
+      - name: Create and populate env.js file
         env:
           WEATHER_API_URL: ${{ secrets.WEATHER_API_URL }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
           IMAGE_API_URL: ${{ secrets.IMAGE_API_URL }}
           IMAGE_ACCESS_KEY: ${{ secrets.IMAGE_ACCESS_KEY }}
-        run:
+        run: |
           touch env.js
-          echo "WEATHER_API_URL=$WEATHER_API_URL" >> env.js
-          echo "WEATHER_API_KEY=$WEATHER_API_KEY" >> env.js
-          echo "IMAGE_API_URL=$IMAGE_API_URL" >> env.js
-          echo "IMAGE_ACCESS_KEY=$IMAGE_ACCESS_KEY" >> env.js
-        
-          echo "cat env.js"
+          echo "export const API_URL = \"$WEATHER_API_URL\";" >> env.js
+          echo "export const API_KEY = \"$WEATHER_API_KEY\";" >> env.js
+          echo "export const IMAGE_API_URL = \"$IMAGE_API_URL\";" >> env.js
+          echo "export const IMAGE_ACCESS_KEY = \"$IMAGE_ACCESS_KEY\";" >> env.js
+
+          echo "✅ Check env.js:"
           cat env.js
         
           echo "ls -a ."
