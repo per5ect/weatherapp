@@ -1,5 +1,5 @@
 import { weatherConditionsToIconMapper } from "./helpers/mappers.js";
-import { formatChanger } from "./helpers/formatChanger.js";
+import {formatChanger, formatTemperature} from "./helpers/formatChanger.js";
 import { SECOND } from "./constants/time.js";
 import { imageApiService } from "./imageApiService.js";
 
@@ -90,7 +90,7 @@ export function WeatherWidgetService(){
 
         applyBackgroundImage(imgUrl)
 
-        applyTemperature(formatChanger(weatherData.main.temp))
+        applyTemperature(formatTemperature(weatherData.main.temp))
         applyLocation(weatherData.name)
 
         setInterval(() => {
