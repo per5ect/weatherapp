@@ -1,0 +1,45 @@
+.search-city-weather{
+    border-bottom: 1px solid white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.search-city-input, .search-city-button{
+    height: 50px;
+    background-color: transparent;
+    border: none;
+
+    color: white;
+    font-size: 20px;
+
+    transition: ease-in-out 0.3s;
+}
+
+.search-city-input {
+    width: 100%;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.search-city-input::placeholder {
+    color: white;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-city-button{
+    width: 50px;
+    cursor: pointer;
+}
+
+.search-city-button:hover{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.user-location{
+    font-size: 14px;
+    color: white;
+}

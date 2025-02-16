@@ -1,0 +1,17 @@
+.secondary-container{
+    max-width: 526px;
+    backdrop-filter: blur(10px);
+    border-left: 5px solid #FFFFFF24;
+
+    display: flex;
+
+    overflow: auto;
+}
+
+.weather-details-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    margin: 40px 50px 0 50px;
+}
