@@ -42,19 +42,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.querySelector(".secondary-container > .weather-details-wrapper > .search-city-weather > button");
 
     function searchWeather() {
-        const city = searchInput.value;
+        const city = searchInput.value
         if (!city) return;
 
         weatherApiService.getWeatherByCity(city)
+            .then(async data => {
+                await WeatherWidgetService().process(data);
+                return data;
+            })
             .then(data => {
-                console.log(data);
+                WeatherDetailsService().detailsProcess(data);
+
+                const { lat, lon } = data.coord;
+
+                return weatherApiService.getForecastByLocation(lat, lon);
+            })
+            .then(forecastData => {
+                WeatherForecastService().processForecast(forecastData);
+                console.log("Forecast Data:", forecastData);
             })
             .catch(error => {
-                console.error(error);
+                console.error("Error fetching weather data:", error);
             });
     }
 
-    searchButton.addEventListener("click", searchWeather)
+    searchButton.addEventListener("click", searchWeather);
 
     searchInput.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
@@ -62,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
 
 async function app (){
     const isLocationFeatureEnabled = localStorage.getItem(Settings.isLocationFeatureEnabled)
