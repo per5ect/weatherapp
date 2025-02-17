@@ -53,12 +53,15 @@
 }
 
 @media (max-width: 425px) {
+    .primary-container {
+        align-items: center;
+    }
     #weather-widget{
         gap: 10px;
     }
 
     #weather-widget > .temp > p{
-        font-size: 64px;
+        font-size: 74px;
     }
 
     .weather-details-wrapper {
@@ -67,12 +70,12 @@
 
 
     #weather-widget > .meta > .location > p{
-        font-size: 30px;
+        font-size: 40px;
         margin-bottom: 4px;
     }
 
     #weather-widget > .meta > .date > p {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     #weather-widget > .icon > i {
