@@ -3,6 +3,7 @@ import { DEFAULT_CITY } from "./constants/api.js";
 import { WeatherWidgetService } from "./weatherWidgetService.js";
 import { Settings } from "./constants/settings.js";
 import { WeatherDetailsService } from "./weatherDetailsService.js";
+import { WeatherForecastService } from "./weatherForecastService.js";
 
 const getWeatherByLocationButton = document.getElementById("get-weather-by-location-feature")
 
@@ -15,8 +16,14 @@ function processWeatherByLocation(){
                 await WeatherWidgetService().process(data)
                 return data
             }).then( data => {
-            WeatherDetailsService().detailsProcess(data)
+                WeatherDetailsService().detailsProcess(data)
         })
+
+        weatherApiService.getForecastByLocation(position.coords.latitude, position.coords.longitude)
+            .then(async data => {
+                WeatherForecastService().processForecast(data);
+                console.log(data)
+            })
     }
 
     const onErrorLocation = (error) => {

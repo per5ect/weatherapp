@@ -1,0 +1,82 @@
+@media (max-width: 1024px) {
+    #weather-widget {
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    #weather-widget > .temp > p{
+        font-size: 100px;
+    }
+
+    #weather-widget > .meta > .location > p{
+        font-size: 40px;
+    }
+
+    #weather-widget > .meta > .date > p {
+        font-size: 14px;
+    }
+
+    #weather-widget > .icon > i {
+        font-size: 65px;
+    }
+
+    .secondary-container {
+        max-width: 426px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .primary-container {
+        justify-content: center;
+    }
+    #weather-widget {
+        margin-left: 0;
+    }
+    #weather-widget > .temp > p{
+        font-size: 120px;
+    }
+
+    .secondary-container {
+        max-width: 100%;
+        border-top: 5px solid #FFFFFF24;
+        border-left: none;
+    }
+
+    .weather-details-wrapper {
+        margin: 40px 100px 0 100px;
+
+    }
+
+    .forecast-details-list > li {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    #weather-widget{
+        gap: 10px;
+    }
+
+    #weather-widget > .temp > p{
+        font-size: 64px;
+    }
+
+    .weather-details-wrapper {
+        margin: 40px 30px 0 30px;
+    }
+
+
+    #weather-widget > .meta > .location > p{
+        font-size: 30px;
+        margin-bottom: 4px;
+    }
+
+    #weather-widget > .meta > .date > p {
+        font-size: 10px;
+    }
+
+    #weather-widget > .icon > i {
+        font-size: 45px;
+    }
+
+}

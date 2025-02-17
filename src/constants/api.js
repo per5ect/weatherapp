@@ -1,4 +1,5 @@
 export const VITE_WEATHER_API_URL = import.meta.env.VITE_WEATHER_API_URL;
+export const VITE_WEATHER_API_FORECAST_URL = import.meta.env.VITE_WEATHER_API_FORECAST_URL;
 export const VITE_WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 export const CNT_COUNT = 5;

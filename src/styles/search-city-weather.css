@@ -25,6 +25,11 @@
     padding-left: 5px;
 }
 
+.search-city-input:focus {
+    outline: none;
+    border: none;
+}
+
 .search-city-input::placeholder {
     color: white;
     color: rgba(255, 255, 255, 0.5);

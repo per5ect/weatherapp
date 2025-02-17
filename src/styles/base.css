@@ -61,7 +61,7 @@ li {
     flex: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     #app-background {
         flex-direction: column; /* Перестраиваем в колонку */
     }

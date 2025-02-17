@@ -2,39 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weatherfy</title>
-    <link rel="icon" type="image/png" href="./public/site-logo.png">
 
+    <title>Weatherfy</title>
+
+    <link rel="icon" type="image/png" href="./public/site-logo.png">
     <link rel="stylesheet" href="./src/styles/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
-<body >
+<body>
     <main id="main">
         <div id="app-background">
             <div class="primary-container">
                 <div id="weather-widget-wrapper">
                     <div id="weather-widget">
                         <div class="temp">
-                            <p>--</p> <!--City current temperature-->
+                            <p>--</p>
                         </div>
                         <div class="meta">
                             <div class="location">
-                                <p>City</p> <!--City name-->
+                                <p>City</p>
                             </div>
                             <div class="date">
-                                <p>--.--.--</p> <!--Current date-->
+                                <p>--.--.--</p>
                             </div>
                         </div>
                         <div class="icon">
-                            <i class=""></i> <!--Weather icon-->
+                            <i class=""></i>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="secondary-container">
                 <div class="weather-details-wrapper">
                     <div class="search-city-weather">
@@ -93,19 +93,19 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="weather-details-forecast">
                         <div class="forecast-title">
                             <p>24h Weather Forecast:</p>
                         </div>
-
-
+                        <div class="weather-details-forecast-list">
+                            <ul class="forecast-details-list">
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
 <script src="./src/index.js" type="module"></script>
 </body>
 </html>
