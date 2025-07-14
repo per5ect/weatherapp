@@ -2,42 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather App</title>
 
+    <title>Weatherfy</title>
+
+    <link rel="icon" type="image/png" href="./public/site-logo.png">
     <link rel="stylesheet" href="./src/styles/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-    <div id="root">
+    <main id="main">
         <div id="app-background">
             <div class="primary-container">
                 <div id="weather-widget-wrapper">
                     <div id="weather-widget">
                         <div class="temp">
-                            <p></p> <!--City current temperature-->
+                            <p>--</p>
                         </div>
                         <div class="meta">
                             <div class="location">
-                                <p></p> <!--City name-->
+                                <p>City</p>
                             </div>
                             <div class="date">
-                                <p></p> <!--Current date-->
+                                <p>--.--.--</p>
                             </div>
                         </div>
                         <div class="icon">
-                            <i class=""></i> <!--Weather icon-->
+                            <i class=""></i>
                         </div>
                     </div>
-                    <span id="get-weather-by-location-feature">Get weather by location</span>
                 </div>
             </div>
+            <div class="secondary-container">
+                <div class="weather-details-wrapper">
+                    <div class="search-city-weather">
+                        <input class="search-city-input" type="search" name="search-city-location" id="" placeholder="Search Location...">
+                        <button class="search-city-button"><i class="bi bi-search"></i></button>
+                    </div>
 
-            <div class="secondary-container"></div>
+                    <span id="get-weather-by-location-feature">Get weather by location <i class="bi bi-geo-alt"></i></span>
+
+                    <div class="weather-details-title">
+                        <p>Weather Details:</p>
+
+                        <div class="weather-details-description">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details-content">
+
+                        <ul class="weather-details-list">
+                            <li>
+                                <p>Temp max:</p>
+                                <div class="weather-details-data">
+                                    <p class="temp-max">--</p>
+                                    <i class="bi bi-thermometer-high"></i>
+                                </div>
+
+                            </li>
+                            <li>
+                                <p>Temp min:</p>
+                                <div class="weather-details-data">
+                                    <p class="temp-min">--</p>
+                                    <i class="bi bi-thermometer-low"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Humidity:</p>
+                                <div class="weather-details-data">
+                                    <p class="humidity">--</p>
+                                    <i class="bi bi-moisture"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Cloudy:</p>
+                                <div class="weather-details-data">
+                                    <p class="cloudiness">--</p>
+                                    <i class="bi bi-clouds"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Wind:</p>
+                                <div class="weather-details-data">
+                                    <p class="wind-speed ">--</p>
+                                    <i class="bi bi-wind"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="weather-details-forecast">
+                        <div class="forecast-title">
+                            <p>24h Weather Forecast:</p>
+                        </div>
+                        <div class="weather-details-forecast-list">
+                            <ul class="forecast-details-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 <script src="./src/index.js" type="module"></script>
 </body>
 </html>

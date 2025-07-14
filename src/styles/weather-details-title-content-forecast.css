@@ -1,0 +1,74 @@
+.weather-details-title,
+.forecast-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+.weather-details-content,
+.weather-details-forecast-list{
+    padding-bottom: 80px;
+    border-bottom: 1px solid white;
+
+    margin-bottom: 40px;
+}
+
+.weather-details-title > p,
+.weather-details-description > p,
+.forecast-title > p{
+    font-size: 18px;
+    color: white;
+}
+
+.forecast-title > p{
+    font-size: 24px;
+}
+
+.weather-details-title > p{
+    font-size: 24px;
+}
+
+.weather-details-description > p{
+    font-weight: bold;
+}
+
+.weather-details-list,
+.forecast-details-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.weather-details-list > li,
+.forecast-details-list > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.forecast-details-list > li{
+    max-width: 354px;
+}
+
+.weather-details-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-details-list > li > p,
+.weather-details-data > p{
+    font-size: 18px;
+    color: white;
+    font-weight: lighter;
+}
+
+.weather-details-data > i{
+    font-size: 24px;
+    color: white;
+}

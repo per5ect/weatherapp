@@ -1,0 +1,32 @@
+.forecast-icon-time-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.forecast-icon-time-description > i{
+    color: white;
+    font-size: 35px;
+}
+
+.forecast-time-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.forecast-time-description > p{
+    font-size: 18px;
+    color: white;
+}
+
+.forecast-description{
+    font-weight: lighter;
+}
+
+.forecast-temperature{
+    font-size: 24px;
+    color: white;
+}

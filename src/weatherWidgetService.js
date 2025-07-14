@@ -1,5 +1,5 @@
 import { weatherConditionsToIconMapper } from "./helpers/mappers.js";
-import { formatTemperature } from "./helpers/formatTemperature.js";
+import {formatChanger, formatTemperature} from "./helpers/formatChanger.js";
 import { SECOND } from "./constants/time.js";
 import { imageApiService } from "./imageApiService.js";
 
